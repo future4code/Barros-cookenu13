@@ -1,6 +1,7 @@
-import { v4 } from "uuid";
+import { v4 } from "uuid"
 
-export class IdGenerator {
-
-    public generateId = () => v4() 
+export abstract class idGenerator {
+    static generateId(){
+        return v4()
+    }
 }

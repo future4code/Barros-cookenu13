@@ -1,6 +1,6 @@
-import { CustomError } from "../error/CustomError";
-import { Signup } from "../models/signup";
-import { BaseDatabase } from "./BaseDataBase";
+import { CustomError } from "../error/customError"
+import { Signup } from "../models/signup"
+import { BaseDatabase } from "./BaseDatabase"
 
 export class SignupDataBase extends BaseDatabase{
 

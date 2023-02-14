@@ -1,9 +1,5 @@
-
-import { userRouter } from './router/UserRouter'
 import app from './controller/app'
+import { signupRouter } from './router/SignupRouter'
 
 
-
-app.get("/ping")
-
-app.use("/signup", userRouter) 
+app.use("/signup", signupRouter)

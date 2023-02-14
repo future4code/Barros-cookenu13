@@ -1,5 +1,5 @@
 import { SignupDataBase } from "../data/SignupDataBase"
-import { CustomError, InvalidName } from "../error/CustomError"
+import { CustomError, InvalidName } from "../error/customError"
 import { Signup, SignupInputDto } from "../models/signup"
 import { idGenerator } from "../services/IdGenerator"
 

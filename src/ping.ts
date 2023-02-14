@@ -9,3 +9,4 @@ export const ping = async (req: Request, res: Response)=>{
     }
 }
 
+export default ping

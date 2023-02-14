@@ -8,9 +8,8 @@ export class SignupController {
         const signupBusiness = new SignupBusiness()
 
         try {
-            const name = req.body.name
-            const email = req.body.email
-            const password = req.body.password
+            const {name, email, password} = req.body
+            
 
             const input = new SignupInputDto(name, email, password)
             await signupBusiness.signup(input)

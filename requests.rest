@@ -5,11 +5,11 @@ GET http://localhost:3003/ping
 
 ### Criar Usuário
 
-POST http://localhost:3003/signup
+POST http://localhost:3003/signup/new-user
 Content-Type: application/json
 
 {
-    "name": "Alice",
-	"email": "alice@lbn.com",
+    "name": "Ricardo",
+	"email": "exemplo@lbn.com",
 	"password": "123456"
 }

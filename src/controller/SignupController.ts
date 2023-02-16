@@ -4,15 +4,16 @@ import { SignupInputDto } from "../models/signup"
 
 
 export class SignupController {
+    private signupBusiness = new SignupBusiness()
+
     signup = async (req: Request, res: Response) => {
-        const signupBusiness = new SignupBusiness()
 
         try {
             const {name, email, password} = req.body
             
 
             const input = new SignupInputDto(name, email, password)
-            await signupBusiness.signup(input)
+            await this.signupBusiness.signup(input)
             res.status(200).send("Usuário Cadastrado com Sucesso!")
 
         } catch (error: any) {

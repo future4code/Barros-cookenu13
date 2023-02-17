@@ -9,7 +9,11 @@ POST http://localhost:3003/signup/new-user
 Content-Type: application/json
 
 {
-    "name": "Ricardo",
-	"email": "exemplo@lbn.com",
-	"password": "123456"
+    "name": "Sandra2",
+	"email": "exemplo-sand@lbn.com",
+	"password": "6544"
 }
+
+###
+
+GET http://localhost:3003/teste

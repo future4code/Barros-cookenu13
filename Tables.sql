@@ -1,0 +1,11 @@
+-- Active: 1676582098331@@35.226.146.116@3306@jbl-4416547-ricardo-morais
+CREATE TABLE Cookenu_signup (
+id VARCHAR(255) PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+email VARCHAR(255) NOT NULL UNIQUE,
+password VARCHAR(255) NOT NULL
+);
+
+DROP TABLE`Cookenu_signup`;
+
+SELECT * FROM `Cookenu_signup`

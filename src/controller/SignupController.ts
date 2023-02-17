@@ -11,7 +11,6 @@ export class SignupController {
         try {
             const {name, email, password} = req.body
             
-
             const input = new SignupInputDto(name, email, password)
             await this.signupBusiness.signup(input)
             res.status(200).send("Usuário Cadastrado com Sucesso!")

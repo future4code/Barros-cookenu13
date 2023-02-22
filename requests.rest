@@ -9,9 +9,9 @@ POST http://localhost:3003/signup/new-user
 Content-Type: application/json
 
 {
-    "name": "Sandra2",
-	"email": "exemplo-sand@lbn.com",
-	"password": "6544"
+    "name": "Roger",
+	"email": "exemplo-roger@lbn.com",
+	"password": "654321"
 }
 
 ###

@@ -12,8 +12,8 @@ export class SignupController {
             const {name, email, password} = req.body
             
             const input = new SignupInputDto(name, email, password)
-            await this.signupBusiness.signup(input)
-            res.status(200).send("Usuário Cadastrado com Sucesso!")
+            const token = await this.signupBusiness.signup(input)
+            res.status(200).send({ message: "Usuário Cadastrado com Sucesso!", token })
 
         } catch (error: any) {
             res.status(error.statusCode || 400).send(error.message || error.sqlMessage)

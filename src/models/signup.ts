@@ -9,15 +9,15 @@ export class SignupInputDto {
         this.password = password
     }
 
-    public getName(){
+    public setName(){
         return this.name
     }
 
-    public getEmail(){
+    public setEmail(){
         return this.email
     }
 
-    public getPassword(){
+    public setPassword(){
         return this.password
     }
 }
@@ -35,19 +35,23 @@ export class Signup {
         this.id = id
     }
 
-    public getName(){
+    public setName(){
         return this.name
     }
 
-    public getEmail(){
+    public setEmail(){
         return this.email
     }
 
-    public getPassword(){
+    public setPassword(){
         return this.password
     }
 
-    public getId(){
+    public setId(){
         return this.id
     }
+}
+
+export type AuthenticationData = {
+    id: string
 }

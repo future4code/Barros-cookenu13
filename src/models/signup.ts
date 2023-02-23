@@ -55,3 +55,30 @@ export class Signup {
 export type AuthenticationData = {
     id: string
 }
+
+export class LoginInputDto {
+    
+    email: string
+    password: string
+
+    constructor(email: string, password: string) {
+        this.email = email
+        this.password = password
+    }
+
+}
+
+export interface ResponseProfileDTO {
+    id: string;
+    name: string;
+    email: string;
+}
+
+export interface OutputUserDTO {
+    id: string;
+    name: string;
+    email: string;
+    password: string;
+    role: string
+ }
+   

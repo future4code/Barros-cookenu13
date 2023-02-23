@@ -39,3 +39,15 @@ export class Unauthorized extends CustomError{
         super(401, "Usuário não autorizado")
     }
 }
+
+export class MissingToken extends CustomError{ 
+    constructor(){
+        super(404, "Token não encontrado!")
+    }
+}
+
+export class ProfileNotFound extends CustomError{ 
+    constructor(){
+        super(404, "Perfil não encontrado!")
+    }
+}

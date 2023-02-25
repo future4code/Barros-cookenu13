@@ -8,7 +8,7 @@ password VARCHAR(255) NOT NULL
 
 DROP TABLE`Cookenu_signup`;
 
-SELECT * FROM `Auth_users`;
+SELECT * FROM `Cookenu_signup`;
 
 CREATE TABLE Cookenu_login (
 email VARCHAR(255) NOT NULL UNIQUE,

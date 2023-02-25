@@ -51,3 +51,9 @@ export class ProfileNotFound extends CustomError{
         super(404, "Perfil não encontrado!")
     }
 }
+
+export class EmailExist extends CustomError{ 
+    constructor(){
+        super(400, "Usuário já existe")
+    }
+}

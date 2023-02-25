@@ -9,9 +9,9 @@ POST http://localhost:3003/signup/new-user
 Content-Type: application/json
 
 {
-    "name": "Roger",
-	"email": "exemplo-roger@lbn.com",
-	"password": "654321"
+    "name": "Breno",
+	"email": "exemplo-breno@lbn.com",
+	"password": "202020"
 }
 
 ### login
@@ -20,8 +20,8 @@ POST http://localhost:3003/signup/login
 Content-Type: application/json
 
 {
-	"email": "exemplo-roger@lbn.com",
-	"password": "654321"
+	"email": "exemplo-renato@lbn.com",
+	"password": "191010"
 }
 
 ###

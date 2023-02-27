@@ -30,13 +30,14 @@ export class SignupDataBase extends BaseDatabase{
         }
     }
 
-    async FindUserByEmailError (email: string) {
+    getAll = async () => {
         try {
             const result = await SignupDataBase.connection("Cookenu_signup")
-            .select().where({email})
-            return result[0]
-
-        } catch (error: any) {
+            .select("id", "name")
+            .from("Cookenu_signup")
+            return result
+            
+        }  catch (error: any) {
             throw new CustomError(error.status, error.message)
         }
     }

@@ -13,7 +13,7 @@ export class SignupController {
             
             const input = new SignupInputDto(name, email, password)
             const token = await this.signupBusiness.signup(input)
-            res.status(201).send({ message: "Usuário Cadastrado com Sucesso!", token })
+            res.status(201).send({ message: "Usuário Criado com Sucesso!", token })
 
         } catch (error: any) {
             res.status(error.statusCode || 400).send(error.message || error.sqlMessage)
@@ -28,6 +28,18 @@ export class SignupController {
             const input = new LoginInputDto(email, password)
             const token = await this.signupBusiness.login(input)
             res.status(200).send({ token })
+
+        } catch (error: any) {
+            res.status(error.statusCode || 400).send(error.message || error.sqlMessage)
+        }
+    }
+
+    getAll = async (req: Request, res: Response) => {
+        try {
+            const { email, password } = req.body
+            const result = await this.signupBusiness.getAll
+
+            res.status(200).send({result})
 
         } catch (error: any) {
             res.status(error.statusCode || 400).send(error.message || error.sqlMessage)

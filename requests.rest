@@ -24,6 +24,16 @@ Content-Type: application/json
 	"password": "191010"
 }
 
+### ver dados
+
+POST http://localhost:3003/signup/getAll
+Content-Type: application/json
+
+{
+	"email": "exemplo-renato@lbn.com",
+	"password": "191010"
+}
+
 ###
 
 GET http://localhost:3003/teste

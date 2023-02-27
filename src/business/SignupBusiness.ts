@@ -1,5 +1,5 @@
 import { SignupDataBase } from "../data/SignupDataBase"
-import { CustomError, EmailExist, InvalidEmail, InvalidName, InvalidPassword, UserNotFound } from "../error/customError"
+import { CustomError, InvalidEmail, InvalidName, InvalidPassword, UserNotFound } from "../error/customError"
 import { LoginInputDto, Signup, SignupInputDto } from "../models/signup"
 import { Authenticator } from "../services/Authenticator"
 import { idGenerator } from "../services/IdGenerator"
@@ -98,5 +98,16 @@ export class SignupBusiness {
         }
     }
 
+    getAll = async () => {
+        try {
+            
+            const signupDataBase = new SignupDataBase()
+            const result = await signupDataBase.getAll
+            return result
+
+        } catch (error: any) {
+            throw new CustomError(error.status, error.message)
+        }
+    }
     
 }
